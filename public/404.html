@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <script>
+      // Redirect any 404 to index.html while preserving the path as a hash for HashRouter
+      var l = window.location;
+      // If you used BrowserRouter+basename and want to keep clean URLs, you can instead fetch index.
+      // For HashRouter, convert path to hash:
+      var newUrl = l.protocol + '//' + l.host + l.pathname.replace(/404\.html$/, '') + '#'+ l.pathname + l.search + l.hash;
+      window.location.replace(newUrl);
+    </script>
+  </head>
+  <body>Redirecting…</body>
+</html>
