@@ -1,7 +1,6 @@
-
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createHashRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 import App from './App'
 import Dashboard from './pages/Dashboard'
@@ -11,7 +10,7 @@ import Samples from './pages/Samples'
 import Export from './pages/Export'
 import Settings from './pages/Settings'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/', element: <App/>,
     children: [
